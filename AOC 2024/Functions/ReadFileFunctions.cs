@@ -37,4 +37,10 @@ public class ReadFileFunctions
         }
         return result;
     }
+
+    public static string ReadString(string filePath)
+    {
+        return File.ReadAllText(filePath);
+    }
+
 }

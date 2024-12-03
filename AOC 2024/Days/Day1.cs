@@ -1,6 +1,6 @@
 ﻿using AOC_2024.Functions;
 
-namespace AOC_2024.Days.Day1;
+namespace AOC_2024.Days;
 
 public class Day1
 {

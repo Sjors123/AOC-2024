@@ -1,6 +1,6 @@
 ﻿using AOC_2024.Functions;
 
-namespace AOC_2024.Days.Day2;
+namespace AOC_2024.Days;
 
 public class Day2
 {
@@ -8,12 +8,12 @@ public class Day2
     {
         int validReports = 0;
         var reports = ReadFileFunctions.ReadLinesToIntList(filePath);
-        foreach(var report in reports)
+        foreach (var report in reports)
         {
             if (report[0] - report[1] == 0) continue;
             bool increase = report[0] - report[1] > 0 ? false : true;
             bool stillValid = true;
-            for (int i = 0; i < report.Count()-1; i++)
+            for (int i = 0; i < report.Count() - 1; i++)
             {
                 if (increase)
                 {
@@ -26,7 +26,7 @@ public class Day2
                 }
                 else
                 {
-                    int difference = report[i] - report[i+1];
+                    int difference = report[i] - report[i + 1];
                     if (difference > 3 || difference < 1)
                     {
                         stillValid = false;
@@ -35,7 +35,7 @@ public class Day2
                 }
             }
             if (stillValid) validReports++;
-        } 
+        }
         return validReports;
     }
 
