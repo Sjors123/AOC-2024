@@ -43,4 +43,8 @@ public class ReadFileFunctions
         return File.ReadAllText(filePath);
     }
 
+    public static List<string> ReadFileIntoStrings(string filePath)
+    {
+       return new List<string>(File.ReadAllLines(filePath));
+    }
 }
